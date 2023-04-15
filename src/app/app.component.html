@@ -4,315 +4,96 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-
-    <style>
-      .row {
-        margin-bottom:6px;
-      }
-      .col-xs-12, .col-xs-3,  .col-xs-2,.col-xs-4, .col-xs-8{
-        background-color:#f1f1f1;
-        text-align:center;
-        padding-top:3px;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <br />
       <br />
       <div class="row">
-        <div class="col-xs-12" style="background-color:white">
-          <p-button label="Primary"></p-button>
+        <div
+          class="col-xs-12"
+          style="background-color:white; text-align: center"
+        >
+          <p-button
+            label="Create Form Layout"
+            (click)="createFormLayout()"
+          ></p-button>
         </div>
       </div>
+      <br />
       <div class="container-fluid">
-        <div class="row">
+        <div
+          class="row"
+          style="margin-bottom:6px;"
+          *ngFor="let item of [].constructor(25)"
+        >
           <div class="container">
             <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
+              class="col-xs-{{ col }}"
+              style="height:30px;border-right:6px solid white;background-color:#f1f1f1;
+              text-align:center;
+              padding-top:3px;"
+              *ngFor="let item of [].constructor(cols)"
             >
-              <span></span>
+              <span>+</span>
             </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="container">
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div
-              class="col-xs-3"
-              style="height:30px;border-right:6px solid white;"
-            >
-              <span></span>
-            </div>
-            <div class="col-xs-3" style="height:30px;"><span></span></div>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
+
+<p-dialog
+  header="Form Layout"
+  [(visible)]="layoutDialog"
+  [style]="{ width: '80vw' }"
+  [position]="'top'"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="justify-content-center" style="padding-top: 5px">
+          Form Element Types:
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="justify-content-center">
+          <p-dropdown
+            [options]="elementTypes"
+            [(ngModel)]="selectedFormElement"
+            optionLabel="name"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="padding-top: 10px">
+      <div class="col-xs-6">
+        <div class="justify-content-center" style="padding-top: 5px">
+          Number of columns:
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="justify-content-center">
+          <p-dropdown
+            [options]="colums"
+            [(ngModel)]="selectedNoOfColumns"
+            optionLabel="name"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="row" style="padding-top: 10px">
+      <div class="col-xs-12" style="text-align: center">
+        <p-button label="Create Layout" (click)="layoutSubmit()"></p-button>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</p-dialog>
