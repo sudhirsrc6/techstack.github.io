@@ -25,19 +25,19 @@ export class AppComponent implements OnInit {
 
   colums: any[] = [
     {
-      name: '1',
+      cols: 1,
     },
     {
-      name: '2',
+      cols: 2,
     },
     {
-      name: '3',
+      cols: 3,
     },
     {
-      name: '4',
+      cols: 4,
     },
     {
-      name: '6',
+      cols: 6,
     },
   ];
   selectedNoOfColumns!: any;
@@ -55,5 +55,9 @@ export class AppComponent implements OnInit {
     this.layoutDialog = true;
   }
 
-  layoutSubmit() {}
+  layoutSubmit() {
+    this.cols = this.selectedNoOfColumns.cols;
+    this.col = 12 / this.cols;
+    this.layoutDialog = false;
+  }
 }
