@@ -1,43 +1,35 @@
-<html lang="en">
-  <head> </head>
-  <body>
-    <div class="container">
-      <br />
-      <br />
-      <div class="row">
+<div class="container">
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-xs-12" style="background-color:white; text-align: center">
+      <p-button
+        label="Create Form Layout"
+        (click)="createFormLayout()"
+      ></p-button>
+    </div>
+  </div>
+  <br />
+  <div class="container-fluid">
+    <div
+      class="row"
+      style="margin-bottom:6px;"
+      *ngFor="let item of [].constructor(25)"
+    >
+      <div class="container">
         <div
-          class="col-xs-12"
-          style="background-color:white; text-align: center"
-        >
-          <p-button
-            label="Create Form Layout"
-            (click)="createFormLayout()"
-          ></p-button>
-        </div>
-      </div>
-      <br />
-      <div class="container-fluid">
-        <div
-          class="row"
-          style="margin-bottom:6px;"
-          *ngFor="let item of [].constructor(25)"
-        >
-          <div class="container">
-            <div
-              class="col-xs-{{ col }}"
-              style="height:30px;border-right:6px solid white;background-color:#f1f1f1;
+          class="col-xs-{{ col }}"
+          style="height:30px;border-right:6px solid white;background-color:#f1f1f1;
               text-align:center;
               padding-top:3px;"
-              *ngFor="let item of [].constructor(cols)"
-            >
-              <span>+</span>
-            </div>
-          </div>
+          *ngFor="let item of [].constructor(cols)"
+        >
+          <span>+</span>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>
 
 <p-dialog
   header="Form Layout"
