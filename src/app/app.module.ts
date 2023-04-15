@@ -4,17 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PrimengModule } from '../primeng/primeng.module';
-import { ButtonModule } from 'primeng/button';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    ReactiveFormsModule,
-    PrimengModule,
-    ButtonModule,
-  ],
-  declarations: [],
+  imports: [CommonModule, BrowserModule, ReactiveFormsModule, PrimengModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
