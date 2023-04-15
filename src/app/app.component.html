@@ -1,3 +1,7 @@
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+/>
 <div class="container">
   <br />
   <br />
@@ -6,6 +10,12 @@
       <p-button
         label="Create Form Layout"
         (click)="createFormLayout()"
+      ></p-button>
+      <p-button
+        label="Generate Angular Source"
+        (click)="createFormLayout()"
+        style="padding-left: 25px"
+        [disabled]="true"
       ></p-button>
     </div>
   </div>
@@ -24,7 +34,7 @@
               padding-top:3px;"
           *ngFor="let item of [].constructor(cols)"
         >
-          <span>+</span>
+          <i class="pi pi-plus" style="cursor: pointer; color: slateblue;"></i>
         </div>
       </div>
     </div>
