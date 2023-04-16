@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { PrimengModule } from '../primeng/primeng.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ElementConfigModule } from '../element-config/element-config.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     ReactiveFormsModule,
     PrimengModule,
-    //ElementConfigModule,
+    ElementConfigModule,
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

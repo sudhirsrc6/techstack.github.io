@@ -33,7 +33,7 @@
           style="height:30px;border-right:6px solid white;background-color:#f1f1f1;
               text-align:center;
               padding-top:3px;"
-          *ngFor="let colData of [].constructor(cols); let colIndex = index"
+          *ngFor="let colData of rowData.cols; let colIndex = index"
         >
           <span style="font-size: 8px" *ngIf="showAdd && colData.placeholder">
             {{ colData.placeholder }}
@@ -41,28 +41,46 @@
           <i
             class="pi pi-plus"
             style="cursor: pointer; color: slateblue;"
-            *ngIf="showAdd && !colData.elementType"
+            *ngIf="showAdd && !colData.saved"
             (click)="openElementConfig(colData)"
           ></i>
           <i
             class="pi pi-pencil"
             style="cursor: pointer; color: slateblue;padding-left: 4px"
-            *ngIf="showAdd && colData.elementType"
+            *ngIf="showAdd && colData.saved"
             (click)="openElementConfig(colData)"
           ></i>
-          
+          <app-element-config
+            *ngIf="colData.showDialog"
+            [inputData]="colData"
+          ></app-element-config>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<p-dialog header="Form Layout" [(visible)]="layoutDialog" [position]="'top'">
+<p-dialog
+  header="Form Layout"
+  [(visible)]="layoutDialog"
+  [position]="'top'"
+  [style]="{ width: '80%' }"
+>
   <div class="container">
+    <div class="row" style="padding-bottom: 5px">
+      <div class="col-xs-12">
+        <p-message
+          severity="error"
+          text="Mandatory to fill all fields marked as *"
+          [style]="{ width: '100%' }"
+          *ngIf="showError"
+        ></p-message>
+      </div>
+    </div>
     <div class="row">
       <div class="col-xs-6">
         <div class="justify-content-center" style="padding-top: 5px">
-          Form Element Types:
+          Form Element Types:<span style="color:red">*</span>
         </div>
       </div>
       <div class="col-xs-6">
@@ -79,7 +97,7 @@
     <div class="row" style="padding-top: 10px">
       <div class="col-xs-6">
         <div class="justify-content-center" style="padding-top: 5px">
-          Number of columns:
+          Number of columns:<span style="color:red">*</span>
         </div>
       </div>
       <div class="col-xs-6">

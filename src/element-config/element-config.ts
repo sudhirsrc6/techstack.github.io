@@ -16,4 +16,7 @@ export class ElementConfig {
 
   dropDownData!: any[];
   rules!: any[];
+
+  showDialog: boolean = false;
+  saved: boolean = false;
 }

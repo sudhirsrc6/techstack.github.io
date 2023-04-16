@@ -1,0 +1,151 @@
+<p-dialog
+  header="Element Config"
+  [(visible)]="inputData.showDialog"
+  [style]="{ width: '80%' }"
+  [position]="'top'"
+>
+  <div class="container">
+    <div class="row" style="padding-bottom: 5px">
+      <div class="col-xs-12">
+        <p-message
+          severity="error"
+          text="Mandatory to fill all fields marked as *"
+          [style]="{ width: '100%' }"
+          *ngIf="showError"
+        ></p-message>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="labelCss">
+          Element Type:<span style="color:red">*</span>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <p-dropdown
+            [options]="elementTypes"
+            [(ngModel)]="inputData.elementType"
+            optionLabel="name"
+            appendTo="body"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">Field Name :<span style="color:red">*</span></div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="inputData.fieldName"
+            autocomplete="off"
+            appendTo="body"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">
+          Placeholder :<span style="color:red">*</span>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="inputData.placeholder"
+            autocomplete="off"
+            appendTo="body"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">Tooltip :<span style="color:red">*</span></div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="inputData.tooltip"
+            autocomplete="off"
+            appendTo="body"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">Data Type:<span style="color:red">*</span></div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <p-dropdown
+            [options]="dataTypes"
+            [(ngModel)]="inputData.dataType"
+            optionLabel="name"
+            appendTo="body"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">Append Text Label :</div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <input
+            pInputText
+            type="text"
+            [(ngModel)]="inputData.appendTextLabel"
+            autocomplete="off"
+            appendTo="body"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 3px">
+      <div class="col-xs-6">
+        <div class="labelCss">Label position:</div>
+      </div>
+      <div class="col-xs-6">
+        <div class="elementCss">
+          <p-dropdown
+            [options]="labelPositions"
+            [(ngModel)]="inputData.appendTextLabelPosition"
+            optionLabel="name"
+            appendTo="body"
+          ></p-dropdown>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <div class="row" style="padding-top: 10px">
+      <div class="col-xs-12" style="text-align: center">
+        <p-button label="Save" (click)="submit()"></p-button>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</p-dialog>

@@ -48,6 +48,8 @@ export class AppComponent implements OnInit {
 
   showAdd: boolean = false;
   rows: any[] = [];
+
+  showError: boolean = false;
   constructor() {}
 
   ngOnInit() {
@@ -57,31 +59,52 @@ export class AppComponent implements OnInit {
         cols: [],
       };
       this.rows.push(rowData);
-      for (let j = 0; j <= this.cols; j++) {
+      for (let j = 0; j < this.cols; j++) {
         rowData.cols.push(new ElementConfig());
       }
     }
   }
 
   createFormLayout() {
+    if (this.showAdd == true) {
+      return;
+    }
     this.layoutDialog = true;
   }
 
   layoutSubmit() {
+    this.showError = false;
+    if (
+      !this.selectedFormElement ||
+      this.selectedFormElement.name === '-- Select --'
+    ) {
+      this.showError = true;
+      return;
+    }
+    if (
+      !this.selectedNoOfColumns ||
+      this.selectedNoOfColumns.cols === '-- Select --'
+    ) {
+      this.showError = true;
+      return;
+    }
     this.cols = this.selectedNoOfColumns.cols;
     this.col = 12 / this.cols;
     this.layoutDialog = false;
     this.showAdd = true;
+    this.rows = [];
     for (let i = 0; i <= 25; i++) {
       let rowData = {
         cols: [],
       };
       this.rows.push(rowData);
-      for (let j = 0; j <= this.cols; j++) {
+      for (let j = 0; j < this.cols; j++) {
         rowData.cols.push(new ElementConfig());
       }
     }
   }
 
-  openElementConfig(rowData: any) {}
+  openElementConfig(colData: any) {
+    colData.showDialog = true;
+  }
 }
