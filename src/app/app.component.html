@@ -10,12 +10,13 @@
       <p-button
         label="Create Form Layout"
         (click)="createFormLayout()"
+        [disabled]="this.showAdd"
       ></p-button>
       <p-button
-        label="Generate Angular Source"
+        label="Generate Angular Code"
         (click)="createFormLayout()"
         style="padding-left: 25px"
-        [disabled]="true"
+        [disabled]="!this.showAdd"
       ></p-button>
     </div>
   </div>
@@ -24,7 +25,7 @@
     <div
       class="row"
       style="margin-bottom:6px;"
-      *ngFor="let item of [].constructor(25)"
+      *ngFor="let rowData of rows; let rowIndex = index"
     >
       <div class="container">
         <div
@@ -32,23 +33,30 @@
           style="height:30px;border-right:6px solid white;background-color:#f1f1f1;
               text-align:center;
               padding-top:3px;"
-          *ngFor="let item of [].constructor(cols)"
+          *ngFor="let colData of [].constructor(cols); let colIndex = index"
         >
-          <i class="pi pi-plus" style="cursor: pointer; color: slateblue;"></i>
+          <span style="font-size: 8px" *ngIf="showAdd && colData.placeholder">
+            {{ colData.placeholder }}
+          </span>
+          <i
+            class="pi pi-plus"
+            style="cursor: pointer; color: slateblue;"
+            *ngIf="showAdd && !colData.elementType"
+            (click)="openElementConfig(colData)"
+          ></i>
+          <i
+            class="pi pi-pencil"
+            style="cursor: pointer; color: slateblue;padding-left: 4px"
+            *ngIf="showAdd && colData.elementType"
+            (click)="openElementConfig(colData)"
+          ></i>
+          
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!--
-<p-dialog
-  header="Form Layout"
-  [(visible)]="layoutDialog"
-  [style]="{ width: '80vw' }"
-  [position]="'top'"
->
- -->
 <p-dialog header="Form Layout" [(visible)]="layoutDialog" [position]="'top'">
   <div class="container">
     <div class="row">
@@ -63,6 +71,7 @@
             [options]="elementTypes"
             [(ngModel)]="selectedFormElement"
             optionLabel="name"
+            appendTo="body"
           ></p-dropdown>
         </div>
       </div>
@@ -79,6 +88,7 @@
             [options]="colums"
             [(ngModel)]="selectedNoOfColumns"
             optionLabel="cols"
+            appendTo="body"
           ></p-dropdown>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ElementConfig } from '../element-config/element-config';
 
 @Component({
   selector: 'my-app',
@@ -45,10 +46,21 @@ export class AppComponent implements OnInit {
   cols: number = 4;
   col: number = 0;
 
+  showAdd: boolean = false;
+  rows: any[] = [];
   constructor() {}
 
   ngOnInit() {
     this.col = 12 / this.cols;
+    for (let i = 0; i <= 25; i++) {
+      let rowData = {
+        cols: [],
+      };
+      this.rows.push(rowData);
+      for (let j = 0; j <= this.cols; j++) {
+        rowData.cols.push(new ElementConfig());
+      }
+    }
   }
 
   createFormLayout() {
@@ -59,5 +71,17 @@ export class AppComponent implements OnInit {
     this.cols = this.selectedNoOfColumns.cols;
     this.col = 12 / this.cols;
     this.layoutDialog = false;
+    this.showAdd = true;
+    for (let i = 0; i <= 25; i++) {
+      let rowData = {
+        cols: [],
+      };
+      this.rows.push(rowData);
+      for (let j = 0; j <= this.cols; j++) {
+        rowData.cols.push(new ElementConfig());
+      }
+    }
   }
+
+  openElementConfig(rowData: any) {}
 }
