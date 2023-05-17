@@ -1,0 +1,209 @@
+/*Base colors -- Please refrain from changing colour values */
+
+/* Primary colours 
+#134875 - corporate colour
+
+These styles are based on variables or MIXINS, any changes that you make to these files may indirectly affect many other Components.
+
+*/
+
+.horizontal-menu {
+  background-color: #134875; /* @corporate */
+  box-shadow: 6px 9px 15px -13px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 6px 9px 15px -13px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 6px 9px 15px -13px rgba(0, 0, 0, 0.63);
+}
+
+/* Menu link colours */
+.horizontal-menu a {
+  color: #ffffff;
+}
+
+.horizontal-menu a:hover {
+  color: #e4e1e1;
+}
+
+.horizontal-menu a:active {
+  color: #e4e1e1!important;
+}
+
+
+
+/* menudropdown colours */
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  background-color: #134875; /* @corporate */
+  border-radius: 7px;
+  background-color: #134875; /* @corporate */
+  border-top: 0px;
+  -webkit-box-shadow: 1px 10px 24px 2px rgba(0,0,0,0.51); 
+  box-shadow: 1px 10px 24px 2px rgba(0,0,0,0.51);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #1b7fd4;
+}
+
+a.dropdown-item li a:hover {
+  color: #ffffff;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.dropdown-toggle .active {
+  color: #e4e1e1;
+}
+
+.navicn {
+  vertical-align: top;
+  margin-top: 4px;
+  margin-right: 7px;
+}
+
+.clr-white{
+  color: white;
+}
+
+.notifications{
+  position: relative;
+}
+
+.notifications span.rounded-circle{
+  top: 12px!important;
+}
+
+.breadcrumbs ul {
+  padding-left: 0px!important;
+}
+
+
+.breadcrumbs ul li {
+  display: inline;
+}
+
+.breadcrumbs ul li a:hover {
+  color: #0c0227 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background: linear-gradient(45deg, #134875 0%, #1A82DA 100%);
+border-radius: 5px;
+box-shadow: -2px 9px 41px -15px #000000;
+}
+
+.nav-link.active:hover{
+  color:#ffffff!important;
+}
+
+.nav-pills:first-child{
+  margin-left: 0px;
+}
+
+.pillswhite{
+  background-color: #ffffff;
+}
+
+.ban-link{
+  color: #134875!important;
+}
+
+.nav-link:hover{
+  color: #134875!important;
+}
+
+.nav-link:hover{
+  color:#000000!important;
+}
+
+
+.nav-link {
+  margin-right: 0px;
+}
+
+.nav-pills .nav-item{
+  margin-right: 20px;
+}
+
+.tab-inactive{
+  background-color: #F8F8F8!important;
+  color: #000;
+}
+
+.tab-inactive:hover{
+  background-color: #F8F8F8!important;
+  color: #000;
+}
+
+.sidenav{
+  background-color: #FAFBFC;
+}
+
+
+.navcontrol{
+  height: 23px;
+  width: 23px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding-left: 5px;
+  padding-right: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  z-index: 1111;
+  margin-left: -27px;
+  position: fixed;
+  box-shadow: -2px 5px 13px -6px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -2px 5px 13px -6px rgba(0,0,0,0.75);
+  -moz-box-shadow: -2px 5px 13px -6px rgba(0,0,0,0.75);
+}
+
+.navcontrol:hover{
+  background-color: #134875;
+  color: #ffffff;
+	animation: pulse 2s infinite;
+  cursor: pointer;
+}
+
+.navcontrol_move{
+  margin-left: -23px;
+  margin-top: 104px;
+  position: fixed !important;
+  display: block !important;
+  background-color: #134875!important;
+  color: #ffffff;
+  transform: scale(1);
+	animation: pulse 2s infinite;
+  cursor: pointer;
+}
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+a.deletescn i:hover{
+  background-color: #dfdfdf;
+	animation: pulse 2s infinite;
+  border-radius: 50px;
+}
+
+.toggled{
+  display: none!important;
+}

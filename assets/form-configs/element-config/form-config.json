@@ -1,0 +1,76 @@
+{
+    "backendSecurityName": "form-config",
+    "fields": {
+      "backendSecurityName": {
+        "fieldName": "backendSecurityName",
+        "placeholder": "Backend Security Name",
+        "elementType": "input",
+        "editable": true,
+        "appendTextTop": true,
+        "appendTextLabel": "Backend Security Name:",
+        "dataType": "string",
+        "required": true
+      },      
+      "cols": {
+        "fieldName": "cols",
+        "placeholder": "Number of columns",
+        "elementType": "dropdown",
+        "editable": true,
+        "appendTextTop": true,
+        "appendTextLabel": "Number of columns:",
+        "optionLabel": "value",
+        "optionValue": "key",
+        "required": true,
+        "dropdownData": [
+          {
+            "key": "1",
+            "value": "One"
+          },
+          {
+            "key": "2",
+            "value": "Two"
+          },
+          {
+            "key": "3",
+            "value": "Three"
+          },
+          {
+            "key": "4",
+            "value": "Four"
+          },          
+          {
+            "key": "6",
+            "value": "Six"
+          }
+        ]
+      },
+      "createColumns": {
+        "fieldName": "createColumns",
+        "placeholder": "Create",
+        "elementType": "button",
+        "editable": true,
+        "buttonClass": "Submit"   
+      },
+      "createFormLayout": {
+        "fieldName": "createFormLayout",
+        "placeholder": "Create Form Layout",
+        "elementType": "button",
+        "editable": true,
+        "buttonClass": "Submit"   
+      },
+      "generateAngularCode": {
+        "fieldName": "generateAngularCode",
+        "placeholder": "Generate Angular Code",
+        "elementType": "button",
+        "editable": true,
+        "buttonClass": "Submit"   
+      },
+      "previewForm": {
+        "fieldName": "previewForm",
+        "placeholder": "Preview Form",
+        "elementType": "button",
+        "editable": false,
+        "buttonClass": "Submit"   
+      }
+    }  
+  }

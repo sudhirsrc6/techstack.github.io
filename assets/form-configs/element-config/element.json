@@ -1,0 +1,382 @@
+{
+  "backendSecurityName": "element",
+  "fields": {
+    "fieldName": {
+      "fieldName": "fieldName",
+      "placeholder": "Form field name",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Form field name:",
+      "dataType": "string",
+      "required": true
+    },
+    "placeholder": {
+      "fieldName": "placeholder",
+      "placeholder": "Placeholder",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Placeholder:",
+      "dataType": "string",
+      "required": true
+    },
+    "tooltip": {
+      "fieldName": "tooltip",
+      "placeholder": "Tooltip",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Tooltip:",
+      "dataType": "string",
+      "required": true
+    },
+    "elementType": {
+      "fieldName": "elementType",
+      "placeholder": "Element Type",
+      "elementType": "dropdown",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Element Type:",
+      "optionLabel": "value",
+      "optionValue": "key",
+      "required": true,
+      "dropdownData": [
+        {
+          "key": "input",
+          "value": "Input Box"
+        },
+        {
+          "key": "autocomplete",
+          "value": "Auto Complete"
+        },
+        {
+          "key": "dropdown",
+          "value": "Drop Down"
+        },
+        {
+          "key": "date",
+          "value": "Only Date"
+        },
+        {
+          "key": "time",
+          "value": "Only Time"
+        },
+        {
+          "key": "checkbox",
+          "value": "Checkbox"
+        },
+        {
+          "key": "radio",
+          "value": "Radio Button"
+        },
+        {
+          "key": "button",
+          "value": "Button"
+        },
+        {
+          "key": "textarea",
+          "value": "Textarea"
+        }
+      ]
+    },
+    "editable": {
+      "fieldName": "editable",
+      "placeholder": "Editable",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",      
+      "appendLabelPosition": "right"
+    },
+    "required": {
+      "fieldName": "required",
+      "placeholder": "Required",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",      
+      "appendLabelPosition": "right"
+    },
+    "appendIconLeft": {
+      "fieldName": "appendIconLeft",
+      "placeholder": "Append Icon Left",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",
+      "viewable": false,
+      "appendLabelPosition": "right"
+    },
+    "icon": {
+      "fieldName": "icon",
+      "placeholder": "Icon",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Icon:",
+      "required": true,
+      "dataType": "string",
+      "viewable": false,
+      "defaultValue": "fal fa-receipt"
+    },
+    "appendTextTop": {
+      "fieldName": "appendTextTop",
+      "placeholder": "Append Text Top",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",
+      "viewable": false,
+      "appendLabelPosition": "right"
+    },
+    "appendTextLabel": {
+      "fieldName": "appendTextLabel",
+      "placeholder": "Append Text Label",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Append Text Label:",
+      "required": true,
+      "dataType": "string",
+      "viewable": false
+    },
+    "dataType": {
+      "fieldName": "dataType",
+      "placeholder": "Data Type",
+      "elementType": "dropdown",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Data Type:",
+      "optionLabel": "value",
+      "optionValue": "key",
+      "required": true,
+      "viewable": false,
+      "dropdownData": [
+        {
+          "key": "string",
+          "value": "String"
+        },
+        {
+          "key": "int",
+          "value": "Int"
+        },
+        {
+          "key": "decimal",
+          "value": "Decimal"
+        },
+        {
+          "key": "currency",
+          "value": "Currency"
+        },
+        {
+          "key": "percentage",
+          "value": "Percentage"
+        }
+      ]
+    },
+    "forceSelection": {
+      "fieldName": "forceSelection",
+      "placeholder": "Force Selection",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",
+      "appendLabelPosition": "right",
+      "viewable": false
+    },
+    "concatDelimiter": {
+      "fieldName": "concatDelimiter",
+      "placeholder": "Concat Delimiter",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Concat Delimiter:",
+      "required": false,
+      "dataType": "string",
+      "viewable": false
+    },    
+    "apiUrl": {
+      "fieldName": "apiUrl",
+      "placeholder": "Api URL",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Api URL:",
+      "required": false,
+      "dataType": "string",
+      "viewable": false
+    },
+    "field": {
+      "fieldName": "field",
+      "placeholder": "Field to display",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Field to display:",
+      "required": true,
+      "dataType": "string",
+      "viewable": false
+    },
+    "concatMultipleFields": {
+      "fieldName": "concatMultipleFields",
+      "placeholder": "Concat Multiple Fields",
+      "elementType": "checkbox",
+      "editable": true,
+      "checkboxType": "onlyCheckbox",
+      "required": false,
+      "appendLabelPosition": "right",
+      "viewable": false
+    },
+    "concatFieldsHeaders": {
+      "fieldName": "concatFieldsHeaders",
+      "placeholder": "Eg: [\"Vendor\",\"Company\"]",
+      "elementType": "textarea",
+      "editable": true,
+      "appendTextTop": true,
+      "required": false,
+      "appendTextLabel": "Concat fields headers:",
+      "viewable": false     
+    },
+    "concatFields": {
+      "fieldName": "concatFields",
+      "placeholder": "Eg: [\"vendorId\",\"companyId\"]",
+      "elementType": "textarea",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Concat Fields:",
+      "viewable": false,
+      "required": true   
+    },
+    "defaultOption": {
+      "fieldName": "defaultOption",
+      "placeholder": "Eg: [{\"vendorId\": \"(ALL)\",\"companyId\": \"(ALL)\"}]",
+      "elementType": "textarea",
+      "editable": true,
+      "appendTextTop": true,
+      "required": false,
+      "appendTextLabel": "Default Option:",
+      "viewable": false
+    },
+    "dropdownData": {
+      "fieldName": "dropdownData",
+      "placeholder": "Eg: [{\"vendorId\": \"AKL\",\"companyId\": \"Abc\"}]",
+      "elementType": "textarea",
+      "editable": true,
+      "appendTextTop": true,
+      "required": false,
+      "appendTextLabel": "Dropdown Data:",
+      "viewable": false      
+    },    
+    "optionLabel": {
+      "fieldName": "optionLabel",
+      "placeholder": "Option Label field",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Option Label field:",
+      "required": true,
+      "dataType": "string",
+      "viewable": false
+    },
+    "optionValue": {
+      "fieldName": "optionValue",
+      "placeholder": "Option Value field",
+      "elementType": "input",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Option Value field:",
+      "required": true,
+      "dataType": "string",
+      "viewable": false
+    },
+    "options": {
+      "fieldName": "options",
+      "placeholder": "Eg: [{\"label\": \"Male\",\"value\": \"m\"}]",
+      "elementType": "textarea",
+      "editable": true,
+      "appendTextTop": true,
+      "required": true,
+      "appendTextLabel": "Dropdown Data:",
+      "viewable": false     
+    }, 
+    "checkboxType": {
+      "fieldName": "checkboxType",
+      "placeholder": "Checkbox Type",
+      "elementType": "dropdown",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Checkbox Type:",
+      "optionLabel": "value",
+      "optionValue": "key",
+      "required": true,
+      "viewable": false,
+      "dropdownData": [
+        {
+          "key": "onlyCheckbox",
+          "value": "Only Checkbox"
+        },
+        {
+          "key": "inputBox",
+          "value": "InputBox"
+        }
+      ]
+    },
+    "appendLabelPosition": {
+      "fieldName": "appendLabelPosition",            
+      "elementType": "radio",
+      "editable": true,
+      "required": true,
+      "viewable": false,
+      "options": [
+        {
+          "label": "Align Label Left",
+          "value": "left"
+        },
+        {
+          "label": "Align Label Right",
+          "value": "right"
+        }
+      ]
+    },
+    "generateConfig": {
+      "fieldName": "generateConfig",
+      "placeholder": "Generate Config",
+      "elementType": "button",
+      "editable": true,
+      "buttonClass": "Submit"   
+    },
+    "saveConfig": {
+      "fieldName": "saveConfig",
+      "placeholder": "Save Config",
+      "elementType": "button",
+      "editable": true,
+      "viewable": true,
+      "buttonClass": "Submit"   
+    },
+    "preview": {
+      "fieldName": "preview",
+      "placeholder": "Refresh Preview",
+      "elementType": "button",
+      "editable": true,
+      "buttonClass": "Submit"   
+    },    
+    "buttonClass": {
+      "fieldName": "buttonClass",
+      "placeholder": "Button css class",
+      "elementType": "dropdown",
+      "editable": true,
+      "appendTextTop": true,
+      "appendTextLabel": "Button css class:",
+      "optionLabel": "value",
+      "optionValue": "key",
+      "required": true,
+      "viewable": false,
+      "dropdownData": [
+        {
+          "key": "Submit",
+          "value": "Submit"
+        },
+        {
+          "key": "Cancel",
+          "value": "Cancel"
+        }
+      ]
+    }
+  }  
+}
